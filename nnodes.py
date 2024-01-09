@@ -128,6 +128,9 @@ def install_llama():
         else:
             subprocess.check_call([sys.executable, "-m", "pip", "install", f"https://github.com/abetlen/llama-cpp-python/releases/download/v{lcpVersion}/llama_cpp_python-{lcpVersion}-{platform_tag}.whl"])
     except Exception as e:
+        platform_tag = "cp311-cp311-manylinux_2_17_x86_64"
+        subprocess.check_call([sys.executable, "-m", "pip", "install", f"https://github.com/abetlen/llama-cpp-python/releases/download/v{
+                              lcpVersion}/llama_cpp_python-{lcpVersion}-{platform_tag}.whl"])
         print(f"Error while installing LLAMA: {e}")
 # llama wheels https://github.com/jllllll/llama-cpp-python-cuBLAS-wheels
 
