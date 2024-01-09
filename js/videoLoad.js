@@ -59,7 +59,7 @@ app.registerExtension({
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
 
 		const onAdded = nodeType.prototype.onAdded;
-		if (nodeData.name === "LoadVideo") {
+		if (nodeData.name === "LoadVideoN") {
 		nodeType.prototype.onAdded = function () {
 			onAdded?.apply(this, arguments);
 			const temp_web_url = this.widgets.find((w) => w.name === "local_url");

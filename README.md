@@ -42,8 +42,8 @@ ComfyUI will then automatically load all custom scripts and nodes at the start.
 
 ## 📽️ Video Nodes 📽️
 
-### LoadVideo
-The LoadVideo node allows loading a video file and extracting frames from it.
+### LoadVideoN
+The LoadVideoN node allows loading a video file and extracting frames from it.
 
 #### Input Fields
 - `video`: Select the video file to load.
@@ -70,7 +70,7 @@ The SaveVideo node takes in extracted frames and saves them back as a video file
 
 #### Input Fields
 - `images`: Frame images as tensors.
-- `METADATA`: Metadata from LoadVideo node.
+- `METADATA`: Metadata from LoadVideoN node.
 - `SaveVideo`: Toggle saving output video file.
 - `SaveFrames`: Toggle saving frames to a folder.
 - `CompressionLevel`: PNG compression level for saving frames.
@@ -78,7 +78,7 @@ The SaveVideo node takes in extracted frames and saves them back as a video file
 Saves output video file and/or extracted frames.
 
 The node takes extracted frames and metadata and can save them as a new video file and/or individual frame images. Video compression and frame PNG compression can be configured.
-NOTE: If you are using **LoadVideo** as source of the frames, the audio of the original file will be maintained but only in case **images_limit** and **starting_frame** are equal to Zero.
+NOTE: If you are using **LoadVideoN** as source of the frames, the audio of the original file will be maintained but only in case **images_limit** and **starting_frame** are equal to Zero.
 
 ### LoadFramesFromFolder
 The LoadFramesFromFolder node allows loading image frames from a folder and returning them as a batch.
