@@ -55,7 +55,7 @@ async function uploadFile(file, updateNode, node, pasted = false) {
 
 let uploadWidget = "";
 app.registerExtension({
-	name: "Comfy.VideoLoad",
+	name: "Comfy.VideoLoadN",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
 
 		const onAdded = nodeType.prototype.onAdded;
